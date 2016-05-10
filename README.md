@@ -40,8 +40,9 @@ Compile the code by running `make`. This ends up creating a bunch of files:
 
 + true_random.o
 + tester
++ generate_constant_stream
 
-Test the random number generator using `./tester`.
+Test the random number generator using `./tester`. Generate an unending stream of data using `./generate_constant_stream`.
 
 If you wish to use the generator in your own program, simply copy `true_random.o` and `true_random.h` into your project, and use the `true_random()` function after a `#include "true_random.h"`.
 

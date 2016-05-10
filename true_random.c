@@ -18,7 +18,7 @@ static int get_bit() {
     return bit;
 }
 
-static int get_fair_bit() {
+int get_fair_bit() {
     while (1) {
         int bit = get_bit();
         if ( bit != get_bit() ) {

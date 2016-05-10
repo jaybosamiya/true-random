@@ -1,4 +1,5 @@
 tester
+generate_constant_stream
 true_random.o
 
 #######################################################
