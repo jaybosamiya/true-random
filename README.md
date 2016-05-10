@@ -4,7 +4,12 @@ True Random
 > Use coin flipping to make an arguably true random number generator
 
 Most random number generation libraries are actually PRNGs (Pseudo Random Number Generators), since computers are basically deterministic.
-The library presented in this repository, however, uses the age-old concept of coin flipping along with naturally occuring delays, that occur on a multi-process system, to generate truly random numbers.
+The library presented in this repository, however, uses the age-old concept of coin flipping along with naturally occuring delays, that occur on a multi-process system, to generate "truly" random numbers.
+
+NOTE(!)
+-------
+
+I have learnt (through multiple helpful comments on [Reddit](https://www.reddit.com/r/programming/comments/4ipsg8/generate_truly_random_numbers/) and [HN](https://news.ycombinator.com/item?id=11667934)) that the method proposed in this is not really random (in the sense of the word: if everything else is same, then will the value be same). Hence, I would like to suggest this technique as only a way to generate some amount of entropy, and to combine it with other sources, and not use this for anything other than recreational purposes. In other words, this is a "clever trick" but is unusable for any kind of serious work.
 
 Method
 ------
