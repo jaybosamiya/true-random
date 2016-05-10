@@ -14,6 +14,8 @@ Method
 A tight loop which constantly flips a single bit (serving as a coin) is run for a millisecond.
 Since the number of times it would be able to flip the bit changes due to random fluctuations in time due to context switching of processes, this generates an arguably truly random bit (I would love to see a PoC that shows otherwise, however).
 
+While it can be agreed that context switching is a deterministic process, we know that practically, the different clocks that exist due to the numerous hardware devices attached to a system, each run at a separate speed. This leads to differing boot times each time, even if hardware remains unchanged. Due to similar reasons, what would be deterministic (the context switching), now has an extra spanner thrown in its works: the clock skew. This means it would basically be impossible (again, I'd love for someone to prove me wrong) to recreate the exact conditions that led to the production of the said bit. This means that the bit is no longer deterministic. Hence, the bit is "truly" random.
+
 ### `get_fair_bit()`
 
 Since the above generated bit might not actually have 50-50 probability of 0 and 1, we use the following table to normalize the probabilities. We repeatedly sample `get_bit()` twice, and decide based upon the results.
@@ -47,3 +49,8 @@ License
 -------
 
 This software is licensed under the [MIT License](http://jay.mit-license.org/2016)
+
+TODO
+----
+
+Run through standard RNG tests.
